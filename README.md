@@ -8,8 +8,8 @@
  - 도끼/삽 트롤링 방지 기능
 ## 이미지 및 상세
 ### 커스텀 크리에이티브 탭
-![img.png](img.png)
-![img_1.png](img_1.png)  
+![img.png](README_images/img.png)
+![img_1.png](README_images/img_1.png)  
 명령어를 통해 크리에이티브 탭을 생성하고 아이템을 관리할 수 있습니다.  
 `/custom-creative-tab <그룹ID> add` - 손에 든 아이템을 해당 그룹에 등록합니다.  
 `/custom-creative-tab <그룹ID> remove [번호]` 해당 그룹에 있는 마지막 아이템 혹은 해당 번호에 대응하는 아이템을 제거합니다.
