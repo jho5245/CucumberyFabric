@@ -1,0 +1,5 @@
+{
+  "itemGroup.custom_creative_tab.example": "테스트 그룹",
+  "lore.custom_creative_tab.example_description": "이 아이템 그룹은 임시 아이템 그룹입니다",
+  "lore.custom_creative_tab.example_description_2": "/custom-creative-tab 명령어와 /view-item 명령어를 사용하여 모드를 사용할 수 있습니다"
+}

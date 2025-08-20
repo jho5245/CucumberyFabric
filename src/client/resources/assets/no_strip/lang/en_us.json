@@ -1,0 +1,6 @@
+{
+  "key.no_strip.toggle": "Toggle No Strip Mode",
+  "message.no_strip.enabled": "§aNo Strip Mode is enabled",
+  "message.no_strip.disabled" : "§cNo Strip Mode is enabled",
+  "message.no_strip.prevented" : "§eYou cannot strip that block now. Press %s §eto toggle."
+}

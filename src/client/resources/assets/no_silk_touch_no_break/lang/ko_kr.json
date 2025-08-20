@@ -1,0 +1,6 @@
+{
+  "key.no_silk_touch_no_break.toggle": "엔더 상자 파괴 방지 기능 전환",
+  "message.no_silk_touch_no_break.enabled": "§a엔더 상자 파괴 방지 기능 활성화됨",
+  "message.no_silk_touch_no_break.disabled": "§c엔더 상자 파괴 방지 기능 비활성화됨",
+  "message.no_silk_touch_no_break.prevented": "§e섬세한 손길 없이는 엔더 상자를 파괴할 수 없습니다. %s §e키를 눌러 비활성화할 수 있습니다."
+}

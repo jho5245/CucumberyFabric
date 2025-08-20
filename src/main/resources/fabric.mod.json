@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "cucumbery",
+  "version": "${version}",
+  "name": "Cucumbery",
+  "description": "Cucumbery has been released(?) to fabric mod OMFG WHAT??",
+  "authors": ["jho5245"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/cucumbery/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.cucumbery.cucumbery.client.CucumberyDataGenerator"
+    ],
+    "client": [
+      "com.cucumbery.cucumbery.client.CucumberyClient"
+    ],
+    "main": [
+      "com.cucumbery.cucumbery.Cucumbery"
+    ]
+  },
+  "mixins": [
+    "cucumbery.mixins.json",
+    {
+      "config": "cucumbery.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

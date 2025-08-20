@@ -1,0 +1,5 @@
+{
+  "key.no_mining_cooldown.toggle": "채광 쿨타임 삭제 기능 전환",
+  "message.no_mining_cooldown.enabled": "§a채광 쿨타임 삭제 기능 활성화됨",
+  "message.no_mining_cooldown.disabled": "§c채광 쿨타임 삭제 기능 비활성화됨"
+}

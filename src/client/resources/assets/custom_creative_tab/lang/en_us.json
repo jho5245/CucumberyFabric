@@ -1,0 +1,5 @@
+{
+  "itemGroup.custom_creative_tab.example": "Example List",
+  "lore.custom_creative_tab.example_description": "This item group is an example item group",
+  "lore.custom_creative_tab.example_description_2": "You can use this mod by using /custom-creative-tab and /view-item command"
+}
