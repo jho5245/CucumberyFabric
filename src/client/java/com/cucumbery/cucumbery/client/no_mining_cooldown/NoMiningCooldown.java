@@ -27,7 +27,7 @@ public class NoMiningCooldown
 		keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.no_mining_cooldown.toggle", // Keybinding translation
 				InputUtil.Type.KEYSYM, // Input type
 				GLFW.GLFW_KEY_H, // Keycode
-				"category.cucumbery.title" // Category translation
+				CucumberyClient.getInstance().getKeyBindCategory() // Category translation
 		));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client ->

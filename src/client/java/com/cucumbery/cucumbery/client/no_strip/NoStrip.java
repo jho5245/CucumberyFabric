@@ -1,5 +1,6 @@
 package com.cucumbery.cucumbery.client.no_strip;
 
+import com.cucumbery.cucumbery.Cucumbery;
 import com.cucumbery.cucumbery.client.CucumberyClient;
 import com.cucumbery.cucumbery.client.CucumberyConfig;
 import com.google.common.collect.ImmutableMap;
@@ -12,6 +13,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Oxidizable;
 import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.option.KeyBinding.Category;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerEntity;
@@ -70,7 +72,7 @@ public class NoStrip
 		keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.no_strip.toggle", // KeyBinding translation
 				InputUtil.Type.KEYSYM, // Input Type
 				GLFW.GLFW_KEY_J, // Keycode
-				"category.cucumbery.title" // Category translation
+				CucumberyClient.getInstance().getKeyBindCategory() // Category translation
 		));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client ->
@@ -91,7 +93,7 @@ public class NoStrip
 	{
 		UseBlockCallback.EVENT.register(((playerEntity, world, hand, blockHitResult) ->
 		{
-			if (!world.isClient)
+			if (!world.isClient())
 				return ActionResult.PASS;
 			if (!config.isNoStripEnabled())
 				return ActionResult.PASS;

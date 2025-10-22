@@ -38,7 +38,7 @@ public class NoSilkTouchNoBreak
 		keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.no_silk_touch_no_break.toggle", // Keybinding translation
 				InputUtil.Type.KEYSYM, // Input type
 				GLFW.GLFW_KEY_K, // Keycode
-				"category.cucumbery.title" // Category translation
+				CucumberyClient.getInstance().getKeyBindCategory() // Category translation
 		));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client ->
@@ -59,7 +59,7 @@ public class NoSilkTouchNoBreak
 	{
 		AttackBlockCallback.EVENT.register((playerEntity, world, hand, blockPos, direction) ->
 		{
-			if (!world.isClient)
+			if (!world.isClient())
 				return ActionResult.PASS;
 			if (!config.isNoSilkTouchNoBreakEnabled())
 				return ActionResult.PASS;

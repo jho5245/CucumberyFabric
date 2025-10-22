@@ -1,5 +1,6 @@
 package com.cucumbery.cucumbery.client;
 
+import com.cucumbery.cucumbery.Cucumbery;
 import com.cucumbery.cucumbery.client.custom_creative_tab.CustomCreativeTab;
 import com.cucumbery.cucumbery.client.no_mining_cooldown.NoMiningCooldown;
 import com.cucumbery.cucumbery.client.no_silk_touch_no_break.NoSilkTouchNoBreak;
@@ -8,6 +9,8 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.option.KeyBinding.Category;
+import net.minecraft.util.Identifier;
 
 import java.io.File;
 
@@ -21,6 +24,8 @@ public class CucumberyClient implements ClientModInitializer
 
 	private CucumberyConfig config;
 
+	private Category keyBindCategory;
+
 	@Override
 	public void onInitializeClient()
 	{
@@ -28,6 +33,7 @@ public class CucumberyClient implements ClientModInitializer
 		configFilePath = FabricLoader.getInstance().getConfigDir() + "/cucumbery_config.json";
 		configFile = new File(configFilePath);
 		config = CucumberyConfig.loadConfig(configFile);
+		keyBindCategory = Category.create(Identifier.of(Cucumbery.MOD_ID, "cucumbery_fabric"));
 
 		registerEvent();
 
@@ -56,5 +62,10 @@ public class CucumberyClient implements ClientModInitializer
 	public static CucumberyClient getInstance()
 	{
 		return instance;
+	}
+
+	public Category getKeyBindCategory()
+	{
+		return keyBindCategory;
 	}
 }
