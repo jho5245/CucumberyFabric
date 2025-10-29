@@ -1,6 +1,7 @@
 package com.cucumbery.cucumbery.client;
 
 import com.cucumbery.cucumbery.Cucumbery;
+import com.cucumbery.cucumbery.client.custom_creative_tab.ModItemGroup;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -16,6 +17,8 @@ public class CucumberyConfig
 	private boolean noMiningCooldownEnabled = false;
 
 	private boolean noSilkTouchNoBreakEnabled = true;
+
+	private String storagePath = System.getProperty("user.dir") + "/" + ModItemGroup.DATA_FOLER_NAME;
 
 	public static CucumberyConfig loadConfig(File file)
 	{
@@ -87,5 +90,10 @@ public class CucumberyConfig
 	public void setNoSilkTouchNoBreakEnabled(boolean noSilkTouchNoBreakEnabled)
 	{
 		this.noSilkTouchNoBreakEnabled = noSilkTouchNoBreakEnabled;
+	}
+
+	public String getStoragePath()
+	{
+		return storagePath;
 	}
 }

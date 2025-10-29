@@ -1,12 +1,10 @@
 package com.cucumbery.cucumbery.client.custom_creative_tab;
 
 import com.cucumbery.cucumbery.Cucumbery;
+import com.cucumbery.cucumbery.client.CucumberyClient;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.component.Component;
-import net.minecraft.component.ComponentType;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -141,7 +139,7 @@ public class ModItemGroup
 		int amount = 0;
 		try
 		{
-			File file = new File(System.getProperty("user.dir") + "/" + DATA_FOLER_NAME + "/" + id + ".txt");
+			File file = new File(CucumberyClient.getInstance().getConfig().getStoragePath() + "/" + id + ".txt");
 			if (!file.exists())
 			{
 				file.getParentFile().mkdirs();
@@ -178,7 +176,7 @@ public class ModItemGroup
 		int amount = 0;
 		itemStacks.clear();
 		itemGroup.getDisplayStacks().clear();
-		File file = new File(System.getProperty("user.dir") + "/" + DATA_FOLER_NAME + "/" + id + ".txt");
+		File file = new File(CucumberyClient.getInstance().getConfig().getStoragePath() + "/" + id + ".txt");
 		if (!file.exists())
 		{
 			return amount;
@@ -220,7 +218,7 @@ public class ModItemGroup
 
 	public static int loadFile(String fileName)
 	{
-		File file = new File(System.getProperty("user.dir") + "/" + DATA_FOLER_NAME + "/" + fileName + (fileName.endsWith(".txt") ? "" : ".txt"));
+		File file = new File(CucumberyClient.getInstance().getConfig().getStoragePath() + "/" + fileName + (fileName.endsWith(".txt") ? "" : ".txt"));
 		if (!file.exists())
 		{
 			if (!file.mkdirs())
@@ -256,7 +254,7 @@ public class ModItemGroup
 
 	public static void loadFiles()
 	{
-		File folder = new File(System.getProperty("user.dir") + "/" + DATA_FOLER_NAME);
+		File folder = new File(CucumberyClient.getInstance().getConfig().getStoragePath());
 		if (!folder.exists())
 		{
 			if (!folder.mkdirs())
